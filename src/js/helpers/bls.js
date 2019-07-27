@@ -32,8 +32,8 @@
       const MCLBN_FR_UNIT_SIZE = MCLBN_FP_UNIT_SIZE
       const MCLBN_COMPILED_TIME_VAR = (MCLBN_FR_UNIT_SIZE * 10 + MCLBN_FP_UNIT_SIZE)
       const BLS_ID_SIZE = MCLBN_FP_UNIT_SIZE * 8
-      const BLS_SECRETKEY_SIZE = BLS_ID_SIZE
-      const BLS_PUBLICKEY_SIZE = BLS_ID_SIZE * 3 * 2
+      const BLS_SECRETKEY_SIZE = 32//BLS_ID_SIZE change to be sync'd with Petrachor
+      const BLS_PUBLICKEY_SIZE = 32 * 3 * 2 //BLS_ID_SIZE * 3 * 2 , same as above
       const BLS_SIGNATURE_SIZE = BLS_ID_SIZE * 3
   
       const _malloc = size => {
