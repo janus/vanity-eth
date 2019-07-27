@@ -34,8 +34,8 @@ module.exports = {
 			},
 			{
 				test: /\.js$/,
-				loader: 'babel-loader',
-				exclude: /node_modules/
+				use: [{loader: 'transform-loader?brfs'}, {loader: 'babel-loader'}],
+				exclude: /node_modules/,
 			},
 			{
 				test: /\.(png|woff|woff2)/,
@@ -69,7 +69,13 @@ module.exports = {
 			from: 'src/assets/images/favicon.ico',
 			to: '.',
 			toType: 'dir'
+		}]),
+		new CopyWebpackPlugin([{
+			from: 'src/js/helpers/bls_c.wasm',
+			to: '.',
+			toType: 'dir'
 		}])
+
 	]
 };
 
