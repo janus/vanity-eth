@@ -74,6 +74,11 @@ module.exports = {
 			from: 'src/js/helpers/bls_c.wasm',
 			to: '.',
 			toType: 'dir'
+		}]),
+		new CopyWebpackPlugin([{
+			from: 'src/js/pkg/pairing_bg.wasm',
+			to: '.',
+			toType: 'dir'
 		}])
 
 	]
